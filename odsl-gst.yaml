@@ -21,4 +21,32 @@ application:
           port: 5434
           username: loguser
           password: logpassword
-    production:
+    production
+
+base_url: https://prod.advancedapp.com
+      debug: false
+      logging:
+        level: warning
+        format: simple
+      databases:
+        primary:
+          name: proddb
+          host: db1.prodnet
+          port: 5432
+          username: produser
+          password: prodsecurepassword
+        secondary:
+          name: prodlogs
+          host: log1.prodnet
+          port: 5434
+          username: logadmin
+          password: logsecurepass
+      additional_services:
+        - name: email_service
+          enabled: true
+          provider: smtp
+          settings:
+            host: smtp.prodnet
+            port: 587
+            username: emailuser
+            password: emailpass:
