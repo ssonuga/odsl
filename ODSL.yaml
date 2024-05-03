@@ -1,0 +1,13 @@
+---
+version: 1.0
+application:
+  name: SampleApp
+  environment: development
+  debug: true
+  port: 8080
+  databases:
+    - name: devdb
+      host: localhost
+      port: 5432
+      username: devuser
+      password: securepassword
