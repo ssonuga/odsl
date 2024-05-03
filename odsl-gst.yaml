@@ -1,0 +1,24 @@
+version: 1.2
+application:
+  name: AdvancedApp
+  environments:
+    development:
+      base_url: http://localhost:8080
+      debug: true
+      logging:
+        level: debug
+        format: detailed
+      databases:
+        primary:
+          name: devdb
+          host: localhost
+          port: 5432
+          username: devuser
+          password: securepassword
+        secondary:
+          name: devlogs
+          host: localhost
+          port: 5434
+          username: loguser
+          password: logpassword
+    production:
